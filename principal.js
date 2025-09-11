@@ -1,13 +1,15 @@
 //muda o nome do titulo e do subtitulo
 var subtitulo = document.querySelector(".subtitulo");
 subtitulo.textContent = "Meus Pacientes";
-var cabeçalho = document.querySelector(".titulo");
-cabeçalho.textContent = "Raizer Nutrição";
+var titulo = document.querySelector(".titulo");
+titulo.textContent = "Raizer Nutrição";
 
 //acessando a tag tr de Paulo
-var paciente = document.querySelectorAll(".paciente");
+var pacientes = document.querySelectorAll(".paciente");
 
-for(var i = 0; i < paciente.length; i = i++){
+//loop para contar com todos os pacientes
+for(var i = 0; i < pacientes.length; i = i++){
+    var paciente = pacientes[i];
 
 //acessando o peso e a altura
 var tdPeso = paciente.querySelector(".info-peso");
@@ -30,12 +32,10 @@ if(pesoValido && alturaValido){
 
 //define se o peso ou altura está invalida
 if(peso <= 0 || peso >= 1000 ){
-    console.log("Peso Inválido");
     var pesoValido = false;
     tdImc.textContent = "Peso Inválido";
 };
 if(altura <= 0 || altura >= 3.00){
-    console.log("Altura Inválida");
     var alturaValido = false;
     tdImc.textContent = "Altura Inválida";
 };
