@@ -1,7 +1,7 @@
 //muda o nome do titulo e do subtitulo
 var subtitulo = document.querySelector(".subtitulo");
-subtitulo.textContent = "Meus Pacientes";
 var titulo = document.querySelector(".titulo");
+subtitulo.textContent = "Meus Pacientes";
 titulo.textContent = "Raizer Nutrição";
 
 //acessando a tag tr de Paulo
@@ -27,13 +27,14 @@ var alturaValido = true;
 if(pesoValido && alturaValido){
     //acessando o imc
     var tdImc = paciente.querySelector(".info-imc");
-    tdImc.textContent = imc;
+    tdImc.textContent = imc.toFixed(2);
 }
 
 //define se o peso ou altura está invalida
 if(peso <= 0 || peso >= 1000 ){
     var pesoValido = false;
     tdImc.textContent = "Peso Inválido";
+    paciente.style.backgroundColor = "red";
 };
 if(altura <= 0 || altura >= 3.00){
     var alturaValido = false;
