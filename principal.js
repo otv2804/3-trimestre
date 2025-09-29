@@ -34,11 +34,19 @@ if(pesoValido && alturaValido){
 if(peso <= 0 || peso >= 1000 ){
     var pesoValido = false;
     tdImc.textContent = "Peso Inválido";
-    paciente.style.backgroundColor = "red";
+    paciente.classList.add(".campo-invalido");
 };
 if(altura <= 0 || altura >= 3.00){
     var alturaValido = false;
     tdImc.textContent = "Altura Inválida";
+    paciente.classList.add(".campo-invalido");
 };
 
+}
+
+//evento click em subtitulo
+subtitulo.addEventListener('click', mostraMensagem);
+
+function mostraMensagem(){
+    alert("este elemento foi clicado");
 }
