@@ -59,7 +59,7 @@ var botaoadicionar = document.querySelector("#adicionar-paciente");
     event.preventDefault();
     
     //acessa o formulario
-var formulario = document.querySelector("#fora-adiciona");
+var formulario = document.querySelector("#form-adiciona");
 
 //captura os valores digitados
 var nome = formulario.nome.value;
@@ -83,5 +83,15 @@ pesoTd.textContent = peso;
 alturaTd.textContent = altura;
 gorduraTd.textContent = gordura;
 imcTd.textContent = imc;
+
+//adicionar as tags na tela do usuario
+pacienteTr.appendChild(nomeTd);
+pacienteTr.appendChild(pesoTd);
+pacienteTr.appendChild(alturaTd);
+pacienteTr.appendChild(gorduraTd);
+pacienteTr.appendChild(imcTd);   
+
+var tabela = document.querySelector("#tabela-pacientes")
+tabela.appendChild(pacienteTr);
 
 });
