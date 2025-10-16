@@ -28,7 +28,7 @@ if(pesoValido && alturaValido){
     //acessando o imc
     var tdImc = paciente.querySelector(".info-imc");
     tdImc.textContent = imc.toFixed(2);
-}
+};
 
 //define se o peso ou altura está invalida
 if(peso <= 0 || peso >= 1000 ){
@@ -42,56 +42,11 @@ if(altura <= 0 || altura >= 3.00){
     paciente.classList.add(".campo-invalido");
 };
 
-}
+};
 
 //evento click em subtitulo
 subtitulo.addEventListener('click', mostraMensagem);
 
 function mostraMensagem(){
     alert("este elemento foi clicado");
-}
-
-//acessar o botão
-var botaoadicionar = document.querySelector("#adicionar-paciente");
-
-//executa os códigos ao clicar no botão
-    botaoadicionar.addEventListener('click', function(event){
-    event.preventDefault();
-    
-    //acessa o formulario
-var formulario = document.querySelector("#form-adiciona");
-
-//captura os valores digitados
-var nome = formulario.nome.value;
-var peso = formulario.peso.value;
-var altura = formulario.altura.value;
-var gordura = formulario.gordura.value;
-
-//criar a tag,  <tr>
-var pacienteTr = document.createElement("tr")
-
-//criar a tag <td>
-var nomeTd = document.createElement("td");
-var pesoTd = document.createElement("td");
-var alturaTd = document.createElement("td");
-var gorduraTd = document.createElement("td");
-var imcTd = document.createElement("td");
-
-//adicionando os valores
-nomeTd.textContent = nome;
-pesoTd.textContent = peso;
-alturaTd.textContent = altura;
-gorduraTd.textContent = gordura;
-imcTd.textContent = imc;
-
-//adicionar as tags na tela do usuario
-pacienteTr.appendChild(nomeTd);
-pacienteTr.appendChild(pesoTd);
-pacienteTr.appendChild(alturaTd);
-pacienteTr.appendChild(gorduraTd);
-pacienteTr.appendChild(imcTd);   
-
-var tabela = document.querySelector("#tabela-pacientes")
-tabela.appendChild(pacienteTr);
-
-});
+};
