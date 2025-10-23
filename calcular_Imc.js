@@ -8,7 +8,7 @@ titulo.textContent = "Raizer Nutrição";
 var pacientes = document.querySelectorAll(".paciente");
 
 //loop para contar com todos os pacientes
-for(var i = 0; i < pacientes.length; i = i++){
+for(var i = 0; i < pacientes.length; i++){
     var paciente = pacientes[i];
 
 //acessando o peso e a altura
@@ -39,7 +39,7 @@ if(peso <= 0 || peso >= 1000 ){
 if(altura <= 0 || altura >= 3.00){
     var alturaValido = false;
     tdImc.textContent = "Altura Inválida";
-    paciente.classList.add(".campo-invalido");
+    paciente.classList.add("campo-invalido");
 };
 };
 
